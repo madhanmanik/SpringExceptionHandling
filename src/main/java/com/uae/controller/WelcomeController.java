@@ -1,17 +1,16 @@
 package com.uae.controller;
 
-import java.util.Map;
-
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/test")
 public class WelcomeController {
 
 
-	@RequestMapping("/test")
+	@GetMapping("/test")
 	public String welcome(@RequestParam String name) throws Exception {
 		
 		System.out.println("---->"+name);
